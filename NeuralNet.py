@@ -73,6 +73,10 @@ class NeuralNet:
     def __activation(self, x, activation="sigmoid"):
         if activation == "sigmoid":
             self.__sigmoid(self, x)
+        if activation == "relu":
+            self.__relu(self, x)
+        if activation == "tanh":
+            self.__tanh(self, x)
 
     #
     # TODO: Define the derivative function for tanh, ReLu and their derivatives
@@ -81,6 +85,10 @@ class NeuralNet:
     def __activation_derivative(self, x, activation="sigmoid"):
         if activation == "sigmoid":
             self.__sigmoid_derivative(self, x)
+        if activation == "relu":
+            self.__relu_derivative(self, x)
+        if activation == "tanh":
+            self.__tanh_derivative(self, x)
 
     def __sigmoid(self, x):
         return 1 / (1 + np.exp(-x))
@@ -90,11 +98,17 @@ class NeuralNet:
     def __sigmoid_derivative(self, x):
         return x * (1 - x)
 
-    def ReLu(x):
+    def __relu(x):
         return x * (x > 0)
 
-    def dReLu(x):
+    def __relu_derivative(x):
         return 1 * (x > 0)
+
+    def __tanh(x):
+        return (np.exp(x) - np.exp(-x)) / (np.exp(x) + np.exp(-x))
+
+    def __tanh_derivative(x):
+        return 1 - x * x
 
 
 
