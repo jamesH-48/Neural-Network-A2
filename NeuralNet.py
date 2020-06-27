@@ -110,8 +110,6 @@ class NeuralNet:
     def __tanh_derivative(x):
         return 1 - (x * x)
 
-
-
     #
     # TODO: Write code for pre-processing the dataset, which would include standardization, normalization,
     #   categorical to numerical, etc
@@ -209,6 +207,7 @@ class NeuralNet:
 
 
 if __name__ == "__main__":
+    # TODO: Make Neural Net take Activation as input. We will end up with 3 models.
     neural_network = NeuralNet("train.csv")
     neural_network.train()
     testError = neural_network.predict()
