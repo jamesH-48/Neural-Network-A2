@@ -108,7 +108,7 @@ class NeuralNet:
         return (np.exp(x) - np.exp(-x)) / (np.exp(x) + np.exp(-x))
 
     def __tanh_derivative(x):
-        return 1 - x * x
+        return 1 - (x * x)
 
 
 
