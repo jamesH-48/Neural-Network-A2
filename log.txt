@@ -1,0 +1,673 @@
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.01|      0.1|   0|8| 864| 232| 4| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  97.33096085409252 %
+Mean Squared Error:  9.45839263
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  96.82539682539682 %
+Mean Squared Error:  1.00660991 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  281.0
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  31.5 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  651.99995444
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  70.99999497 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.1|   0|8| 864| 232| 4| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  86.12099644128114 %
+Mean Squared Error:  40.87112028
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  92.06349206349206 %
+Mean Squared Error:  2.93486193 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  83.80782918149467 %
+Mean Squared Error:  46.75493788
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  90.47619047619048 %
+Mean Squared Error:  2.92275709 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  93.77224199288257 %
+Mean Squared Error:  21.63126952
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  96.82539682539682 %
+Mean Squared Error:  1.37139685 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.0001|      0.1|   0|8| 864| 232| 4| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  83.98576512455516 %
+Mean Squared Error:  64.66022527
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  90.47619047619048 %
+Mean Squared Error:  5.79553154 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  81.31672597864768 %
+Mean Squared Error:  58.15740568
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  88.88888888888889 %
+Mean Squared Error:  5.60856558 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  89.5017793594306 %
+Mean Squared Error:  32.16417086
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  93.65079365079364 %
+Mean Squared Error:  1.94857663 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.2|   0|8| 864| 232| 4| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  86.0 %
+Mean Squared Error:  35.54047938
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  87.2 %
+Mean Squared Error:  7.24140602 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  84.39999999999999 %
+Mean Squared Error:  41.26175059
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  85.6 %
+Mean Squared Error:  7.37372475 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  94.39999999999999 %
+Mean Squared Error:  17.46498372
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  93.60000000000001 %
+Mean Squared Error:  5.10397396 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.1|   0|8| 864| 232| 1| 1|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  84.16370106761566 %
+Mean Squared Error:  47.61282353
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  90.47619047619048 %
+Mean Squared Error:  3.40025465 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  160.10142349
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  17.9868511 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  85.58718861209964 %
+Mean Squared Error:  56.18949688
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  90.47619047619048 %
+Mean Squared Error:  4.4705238 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.1|   0|8| 864| 232| 10| 10|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  98.39857651245552 %
+Mean Squared Error:  8.64845102
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  93.65079365079364 %
+Mean Squared Error:  1.48111478 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  40.0355871886121 %
+Mean Squared Error:  169.11537868
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  61.904761904761905 %
+Mean Squared Error:  11.99179024 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  98.57651245551602 %
+Mean Squared Error:  8.34754977
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  96.82539682539682 %
+Mean Squared Error:  1.10891604
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.1|   0|8| 864| 232| 8| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  90.92526690391459 %
+Mean Squared Error:  16.44889338
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  93.65079365079364 %
+Mean Squared Error:  1.58312499 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  49.644128113879006 %
+Mean Squared Error:  147.92917309
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  31.746031746031743 %
+Mean Squared Error:  21.22081512 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  99.11032028469751 %
+Mean Squared Error:  6.0267904
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  95.23809523809523 %
+Mean Squared Error:  1.23961937 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.1|   0|8| 864| 232| 6| 8|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  95.37366548042705 %
+Mean Squared Error:  14.22593848
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  96.82539682539682 %
+Mean Squared Error:  1.14416922 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  49.644128113879006 %
+Mean Squared Error:  144.50890943
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  28.57142857142857 %
+Mean Squared Error:  21.9167787 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  98.22064056939502 %
+Mean Squared Error:  11.32441527
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  96.82539682539682 %
+Mean Squared Error:  1.01655506 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.1|   0|8| 864| 232| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  95.01779359430606 %
+Mean Squared Error:  13.57066779
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  93.65079365079364 %
+Mean Squared Error:  1.50141604 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  86.83274021352312 %
+Mean Squared Error:  40.18171282
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  90.47619047619048 %
+Mean Squared Error:  3.38890356 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  97.15302491103202 %
+Mean Squared Error:  10.21427774
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  98.4126984126984 %
+Mean Squared Error:  0.61021491 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      6000|0.001|      0.1|   0|8| 864| 232| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  89.85765124555161 %
+Mean Squared Error:  21.77778433
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  92.06349206349206 %
+Mean Squared Error:  2.15768911 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  84.34163701067615 %
+Mean Squared Error:  43.78072042
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  87.3015873015873 %
+Mean Squared Error:  3.2598046 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  96.26334519572953 %
+Mean Squared Error:  13.31656604
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  98.4126984126984 %
+Mean Squared Error:  0.76627987 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      6000|0.001|      0.1|   0|8| 864| 232| 5| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  89.85765124555161 %
+Mean Squared Error:  20.50587171
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  92.06349206349206 %
+Mean Squared Error:  2.10823799 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  86.12099644128114 %
+Mean Squared Error:  44.72669326
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  90.47619047619048 %
+Mean Squared Error:  3.4545829 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  94.83985765124555 %
+Mean Squared Error:  23.48000411
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  92.06349206349206 %
+Mean Squared Error:  2.08186238 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      6000|0.001|      0.1|   0|8| 864| 232| 4| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  85.23131672597864 %
+Mean Squared Error:  43.91240925
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  90.47619047619048 %
+Mean Squared Error:  2.99717197 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  83.80782918149467 %
+Mean Squared Error:  46.754946
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  90.47619047619048 %
+Mean Squared Error:  2.92274063 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  93.77224199288257 %
+Mean Squared Error:  24.91795981
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  93.65079365079364 %
+Mean Squared Error:  1.70146273 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      10000|0.001|      0.1|   0|8| 864| 232| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  95.72953736654804 %
+Mean Squared Error:  11.90547441
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  95.23809523809523 %
+Mean Squared Error:  1.35513814 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  86.29893238434164 %
+Mean Squared Error:  42.97956721
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  90.47619047619048 %
+Mean Squared Error:  3.66726419 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  97.33096085409252 %
+Mean Squared Error:  10.20299134
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  98.4126984126984 %
+Mean Squared Error:  0.65605022 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      10000|0.001|      0.1|   1|8| 137| 232| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  95.90747330960853 %
+Mean Squared Error:  12.50897664
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  98.4126984126984 %
+Mean Squared Error:  0.82404989 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  42.170818505338076 %
+Mean Squared Error:  162.83299466
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  42.857142857142854 %
+Mean Squared Error:  18.03904549 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  97.68683274021353 %
+Mean Squared Error:  9.42148973
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  100.0 %
+Mean Squared Error:  0.14113718 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      10000|0.001|      0.1|   2|8| 978| 232| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  96.26334519572953 %
+Mean Squared Error:  11.13258762
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  90.47619047619048 %
+Mean Squared Error:  2.20182217 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  83.80782918149467 %
+Mean Squared Error:  47.03559447
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  90.47619047619048 %
+Mean Squared Error:  2.9132959 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  94.83985765124555 %
+Mean Squared Error:  20.02024917
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  93.65079365079364 %
+Mean Squared Error:  2.17318398 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      10000|0.001|      0.1|   3|8| 243| 232| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  97.50889679715303 %
+Mean Squared Error:  12.34147969
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  93.65079365079364 %
+Mean Squared Error:  2.40760687 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  87.01067615658363 %
+Mean Squared Error:  38.40025929
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  85.71428571428571 %
+Mean Squared Error:  4.41323405 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  97.68683274021353 %
+Mean Squared Error:  9.33075021
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  98.4126984126984 %
+Mean Squared Error:  1.41942959 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      50000|0.001|      0.1|   1|8| 137| 232| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  99.8220640569395 %
+Mean Squared Error:  1.89657665
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  98.4126984126984 %
+Mean Squared Error:  0.90175542 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  42.170818505338076 %
+Mean Squared Error:  162.83234077
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  42.857142857142854 %
+Mean Squared Error:  18.03918615 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  98.57651245551602 %
+Mean Squared Error:  6.42491652
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  100.0 %
+Mean Squared Error:  0.07532867 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.1|   1|9| 137| 474| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  89.85765124555161 %
+Mean Squared Error:  30.53215329
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  92.06349206349206 %
+Mean Squared Error:  2.09158192 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  281.0
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  31.5 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  97.86476868327402 %
+Mean Squared Error:  11.20374857
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  100.0 %
+Mean Squared Error:  0.20711785 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.1|   1|10| 137| 585| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  89.85765124555161 %
+Mean Squared Error:  20.89118038
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  95.23809523809523 %
+Mean Squared Error:  1.38378928 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  41.637010676156585 %
+Mean Squared Error:  164.86508612
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  47.61904761904761 %
+Mean Squared Error:  16.22875871 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  94.66192170818505 %
+Mean Squared Error:  19.70186496
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  95.23809523809523 %
+Mean Squared Error:  1.6148596 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.1|   1421|9235| 61| 658| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  89.32384341637011 %
+Mean Squared Error:  18.8971191
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  95.23809523809523 %
+Mean Squared Error:  1.11513429 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  222.69395018
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  23.45957498 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  96.44128113879003 %
+Mean Squared Error:  14.82645363
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  100.0 %
+Mean Squared Error:  0.50679363 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.1|   9621|534| 737| 432| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  90.5693950177936 %
+Mean Squared Error:  17.57060645
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  88.88888888888889 %
+Mean Squared Error:  2.95162241 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  159.91459075
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  18.01764516 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  97.68683274021353 %
+Mean Squared Error:  13.17394785
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  95.23809523809523 %
+Mean Squared Error:  2.52516846 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.1|   9621|534| 737| 432| 4| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  89.32384341637011 %
+Mean Squared Error:  24.95338302
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  88.88888888888889 %
+Mean Squared Error:  3.96089987 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  281.0
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  31.5 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  91.10320284697508 %
+Mean Squared Error:  31.82093438
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  87.3015873015873 %
+Mean Squared Error:  5.51042198 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.0001|      0.1|   346|845| 573| 57| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  85.23131672597864 %
+Mean Squared Error:  42.71383386
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  82.53968253968253 %
+Mean Squared Error:  5.59797791 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  96.08540925266904 %
+Mean Squared Error:  19.61535562
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  90.47619047619048 %
+Mean Squared Error:  3.52539882 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  96.97508896797153 %
+Mean Squared Error:  18.92097419
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  92.06349206349206 %
+Mean Squared Error:  3.85345069 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.0001|      0.1|   728|456| 940| 766| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  84.69750889679716 %
+Mean Squared Error:  43.93601514
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  82.53968253968253 %
+Mean Squared Error:  6.08935324 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  281.0
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  31.5 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  91.63701067615658 %
+Mean Squared Error:  29.39495613
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  87.3015873015873 %
+Mean Squared Error:  6.14562869 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.0001|      0.1|   125|568| 921| 104| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  84.87544483985765 %
+Mean Squared Error:  43.49143823
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  85.71428571428571 %
+Mean Squared Error:  5.03327112 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  81.49466192170819 %
+Mean Squared Error:  52.93850935
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  76.19047619047619 %
+Mean Squared Error:  7.04141956 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  88.96797153024912 %
+Mean Squared Error:  30.71268555
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  87.3015873015873 %
+Mean Squared Error:  2.86527783 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.0001|      0.1|   1002|1002| 533| 533| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  84.16370106761566 %
+Mean Squared Error:  47.28093195
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  87.3015873015873 %
+Mean Squared Error:  4.27818418 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  41.281138790035584 %
+Mean Squared Error:  167.65878064
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  57.14285714285714 %
+Mean Squared Error:  13.48807863 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  90.5693950177936 %
+Mean Squared Error:  30.93474907
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  90.47619047619048 %
+Mean Squared Error:  3.06132134 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      15000|0.001|      0.1|   1002|1002| 533| 533| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  98.93238434163702 %
+Mean Squared Error:  7.35130776
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  96.82539682539682 %
+Mean Squared Error:  1.40175202 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  281.0
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  31.5 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  96.79715302491103 %
+Mean Squared Error:  17.32289999
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  93.65079365079364 %
+Mean Squared Error:  2.43318459 
+-------------------------------------------------------------------------------------------------------------
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.1|   777|777| 234| 234| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  92.52669039145907 %
+Mean Squared Error:  14.83749175
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  87.3015873015873 %
+Mean Squared Error:  2.60138004 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  281.0
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  0.0 %
+Mean Squared Error:  31.5 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  95.01779359430606 %
+Mean Squared Error:  17.99991056
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  95.23809523809523 %
+Mean Squared Error:  2.34193921 
+-------------------------------------------------------------------------------------------------------------
