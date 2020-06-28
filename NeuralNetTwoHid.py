@@ -35,6 +35,7 @@ class NeuralNet:
         # test refers to the testing dataset
         # h represents the number of neurons in the hidden layer
         #raw_input = pd.read_csv(dataFile)
+        #url = "https://raw.githubusercontent.com/jamesH-48/Neural-Network-A2/master/smalltest.csv"
         url = "https://raw.githubusercontent.com/jamesH-48/Neural-Network-A2/master/EEG%20Eye%20State.csv"
         raw_input = pd.read_csv(url, header=0)
         # TODO: Remember to implement the preprocess method
@@ -336,8 +337,8 @@ if __name__ == "__main__":
     # Randomly Generate State for Train/Test Split
     seed(0)
     state = randint(0,1000)
-    max_iterations = 50
-    LR = .01
+    max_iterations = 6000
+    LR = .1
 
     # Train Sigmoid Model
     neural_network_sigmoid = NeuralNet("train.csv", "sigmoid", state)
