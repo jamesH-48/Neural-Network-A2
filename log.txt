@@ -408,29 +408,6 @@ Percent Correct:  95.23809523809523 %
 Mean Squared Error:  1.81931083 
 -------------------------------------------------------------------------------------------------------------
 Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
-      9000|0.001|      0.1|   3|8| 243| 232| 4| 6|
-Train Accuracy Results for  sigmoid  activation function:
-Percent Correct:  87.90035587188612 %
-Mean Squared Error:  35.05465899
-Test Accuracy Results for  sigmoid  activation function:
-Percent Correct:  84.12698412698413 %
-Mean Squared Error:  4.88060567 
-
-Train Accuracy Results for  relu  activation function:
-Percent Correct:  0.0 %
-Mean Squared Error:  159.82918149
-Test Accuracy Results for  relu  activation function:
-Percent Correct:  0.0 %
-Mean Squared Error:  18.13658642 
-
-Train Accuracy Results for  tanh  activation function:
-Percent Correct:  89.85765124555161 %
-Mean Squared Error:  31.73110265
-Test Accuracy Results for  tanh  activation function:
-Percent Correct:  90.47619047619048 %
-Mean Squared Error:  2.79080435 
--------------------------------------------------------------------------------------------------------------
-Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
       200000|0.001|      0.1|   3|8| 243| 232| 6| 4|
 
 Train Accuracy Results for  sigmoid  activation function:
@@ -766,3 +743,132 @@ Test Accuracy Results for  tanh  activation function:
 Percent Correct:  95.23809523809523 %
 Mean Squared Error:  2.34193921 
 -------------------------------------------------------------------------------------------------------------
+Example of Full Print Out from Code:
+
+Activation Function:  sigmoid
+After 9000 iterations, the total error is 13.8352405033163
+The final weight vectors are (starting from input to output layers) 
+[[-0.96518676  0.95521458 -2.24384158  3.38776972 -0.44664636 -0.06632917]
+ [-0.88561805  0.96134031 -2.1605597  -0.69332336  3.7320312  -0.28179051]
+ [-0.24712817 -3.41451675  2.22499055 -0.36206475 -0.91186041 -1.51676469]
+ [ 3.54021463  0.10299454  2.13322541 -0.45043114 -0.91820906  0.62590441]]
+The final weight vectors are (starting from input to output layers) 
+[[-3.38669852  4.05769741 -0.39547388 -2.50959277]
+ [ 2.25352414 -3.14961528  0.22413524  1.69432106]
+ [-6.14979998  5.30615475 -0.82427668 -2.10837063]
+ [ 2.28347092 -3.39367225 -0.10196416  1.81368516]
+ [ 3.15882009 -3.99735315  1.65886519  1.82143104]
+ [ 0.57736918 -1.38180488 -0.28137784  0.35535604]]
+The final weight vectors are (starting from input to output layers) 
+[[ 4.10164773 -5.67342277 -4.17768036]
+ [-7.65137881 -4.77117674  6.67896589]
+ [ 0.01648904  1.32014532 -1.12541199]
+ [ 3.00297972  0.12996333 -3.15428999]]
+The final bias vectors are (starting from input to output layers) 
+[[ 0.29685345 -0.12842675  0.04487347 -0.64286314  0.66092708  0.12884354]]
+The final bias vectors are (starting from input to output layers) 
+[[-0.98781659 -0.4607351   0.47129156 -0.44129795]]
+The final bias vectors are (starting from input to output layers) 
+[[-1.83489419  0.88798513 -0.08734937]]
+
+Activation Function:  relu
+After 9000 iterations, the total error is 38.6810572494025
+The final weight vectors are (starting from input to output layers) 
+[[-3.00033556 -1.50525667 -2.31481763  0.52824255 -0.3788239  -0.43180741]
+ [-0.69413654 -1.23243072 -3.46362263  0.48885017  0.39320259 -0.61824156]
+ [ 1.62650513  0.08033718  2.55622244 -0.85695476 -0.14778837 -0.57708362]
+ [ 1.9017774   2.28019192  3.16529802 -0.42526541 -0.45833678  0.30192252]]
+The final weight vectors are (starting from input to output layers) 
+[[-0.66996026  0.11550363 -0.15761978 -0.59863646]
+ [ 0.50374691 -0.19405329 -0.53109933  0.12714691]
+ [-0.55274645 -0.03079272  0.00843001  0.02714398]
+ [ 0.01860202 -0.98055273 -0.93818931 -0.06083901]
+ [ 0.08628945 -0.37840794  0.86610466 -0.55531024]
+ [ 0.50908394 -0.69325969 -0.60336441  0.15890563]]
+The final weight vectors are (starting from input to output layers) 
+[[ 0.58336634 -0.29034316 -1.11142013]
+ [-0.0897543  -2.48882575 -0.34195706]
+ [ 0.2335761   0.64251427 -0.21314269]
+ [ 0.93301386  0.16999151 -0.14286654]]
+The final bias vectors are (starting from input to output layers) 
+[[ 2.46834837e-02  1.03639985e-01  2.13153626e+00 -1.29730351e+00
+  -9.88342121e-01 -7.17754963e-04]]
+The final bias vectors are (starting from input to output layers) 
+[[ 1.99751357 -0.68563747 -0.36308826 -0.86524144]]
+The final bias vectors are (starting from input to output layers) 
+[[-0.27818947  0.01029647  0.98450755]]
+
+Activation Function:  tanh
+After 9000 iterations, the total error is 13.439193372230093
+The final weight vectors are (starting from input to output layers) 
+[[-0.34653812  2.15532319 -1.4297337   0.13904103 -2.41767526  0.15088831]
+ [ 1.11961311  2.45792444 -1.6950783   0.25377255 -0.37903325 -1.81203285]
+ [-0.3021806  -2.92522376  0.59608071  1.07694892  1.42568518  0.65340125]
+ [ 0.86140004 -1.64826652  2.7354644  -0.45023002  1.40697306  0.67921868]]
+The final weight vectors are (starting from input to output layers) 
+[[-0.0527857  -1.48786291 -0.42476821  0.07404893]
+ [-0.10870954 -3.8843307  -1.40695334  2.29170351]
+ [ 0.08515294  3.68775606  0.91664264 -2.36760053]
+ [ 0.0949072   0.829113   -0.29792705 -0.43447844]
+ [ 0.84583     3.58148197  1.05237019 -1.95651644]
+ [ 0.19598612  1.82746535  0.16592159 -1.43183878]]
+The final weight vectors are (starting from input to output layers) 
+[[-0.28706647 -0.01840529  0.25488772]
+ [-0.00886217 -0.62959496  1.28941273]
+ [ 0.31726411  0.11340995 -0.43339549]
+ [ 1.15164068 -0.51132523 -0.09862723]]
+The final bias vectors are (starting from input to output layers) 
+[[ 0.37266045 -1.60542625  1.47482031 -0.87638227 -2.03321281 -0.91491237]]
+The final bias vectors are (starting from input to output layers) 
+[[ 1.01977875 -1.92990996 -0.0151339  -0.57986704]]
+The final bias vectors are (starting from input to output layers) 
+[[1.11442514 0.00146702 0.99599182]]
+
+State:  243
+err s:
+ [[322.45687901]
+ [308.04651414]
+ [293.69212696]
+ ...
+ [ 13.83867279]
+ [ 13.8369564 ]
+ [ 13.8352405 ]]
+err r:
+ [[533.54030335]
+ [236.02949441]
+ [179.73669736]
+ ...
+ [ 38.65085523]
+ [ 38.63911402]
+ [ 38.68105725]]
+err t:
+ [[305.83520893]
+ [241.45990265]
+ [211.8958166 ]
+ ...
+ [ 12.8219209 ]
+ [ 11.85350566]
+ [ 13.43919337]]
+Iterations|   LR|Test Size|Seed1|Seed2|state|Randseed|h1|h2|
+      9000|0.001|      0.1|   3|8| 243| 232| 6| 4|
+
+Train Accuracy Results for  sigmoid  activation function:
+Percent Correct:  96.26334519572953 %
+Mean Squared Error:  13.8335251
+Test Accuracy Results for  sigmoid  activation function:
+Percent Correct:  93.65079365079364 %
+Mean Squared Error:  2.39412466 
+
+Train Accuracy Results for  relu  activation function:
+Percent Correct:  86.83274021352312 %
+Mean Squared Error:  38.66535316
+Test Accuracy Results for  relu  activation function:
+Percent Correct:  85.71428571428571 %
+Mean Squared Error:  4.41966115 
+
+Train Accuracy Results for  tanh  activation function:
+Percent Correct:  96.61921708185054 %
+Mean Squared Error:  12.28927302
+Test Accuracy Results for  tanh  activation function:
+Percent Correct:  95.23809523809523 %
+Mean Squared Error:  1.81931083 
