@@ -28,7 +28,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
 
 class NeuralNet:
-    def __init__(self, dataFile, activation, state, header=True, h1=8, h2=4):
+    def __init__(self, dataFile, activation, state, h1, h2, testsize, header=True):
         self.activation = activation
         #np.random.seed(1)
         # train refers to the training dataset
@@ -50,7 +50,7 @@ class NeuralNet:
         self.Xnp = self.Xnp.astype(float)
         self.Ynp = self.Ynp.astype(float)
 
-        self.X, self.Xtest, self.y, self.ytest = train_test_split(self.Xnp,self.Ynp,test_size=0.1,random_state=state)
+        self.X, self.Xtest, self.y, self.ytest = train_test_split(self.Xnp,self.Ynp,test_size=testsize,random_state=state)
 
         #
         # Find number of input and output layers from the dataset
@@ -333,19 +333,23 @@ class NeuralNet:
 if __name__ == "__main__":
     # Initialize Variables
     # Randomly Generate State for Train/Test Split
-    seed(0)
+    s = 0
+    seed(s)
     state = randint(0,1000)
     max_iterations = 9000
     LR = .001
+    testsize = .1
+    h1 = 4
+    h2 = 4
 
     # Train Sigmoid Model
-    neural_network_sigmoid = NeuralNet("train.csv", "sigmoid", state)
+    neural_network_sigmoid = NeuralNet("train.csv", "sigmoid", state, h1, h2, testsize)
     err_sigmoid = neural_network_sigmoid.train(max_iterations, LR)
     # Train ReLu Model
-    neural_network_relu = NeuralNet("train.csv", "relu", state)
+    neural_network_relu = NeuralNet("train.csv", "relu", state, h1, h2, testsize)
     err_relu = neural_network_relu.train(max_iterations, LR)
     # Train Tanh Model
-    neural_network_tanh = NeuralNet("train.csv", "tanh", state)
+    neural_network_tanh = NeuralNet("train.csv", "tanh", state, h1, h2, testsize)
     err_tanh = neural_network_tanh.train(max_iterations, LR)
 
     # Show State
@@ -354,6 +358,9 @@ if __name__ == "__main__":
     print("err r:", err_relu)
     print("err t:", err_tanh)
 
+    print("Iterations|   LR|Test Size|Seed|state|h1|h2|")
+    print("      {itr}|{LR}|      {ts}|   {seed}|  {state}| {h1}| {h2}|".format(itr = max_iterations, LR = LR, ts = testsize, seed=s,state=state,h1=h1,h2=h2))
+    print()
     # Print Out Test Error for Each Model
     neural_network_sigmoid.predict("sigmoid")
     neural_network_relu.predict("relu")
