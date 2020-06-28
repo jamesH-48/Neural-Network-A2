@@ -28,51 +28,33 @@ from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
 
 class NeuralNet:
-    def __init__(self, dataFile, activation, state, header=True, h1=4, h2=4):
+    def __init__(self, dataFile, activation, state, header=True, h1=8, h2=8):
         self.activation = activation
         #np.random.seed(1)
         # train refers to the training dataset
         # test refers to the testing dataset
         # h represents the number of neurons in the hidden layer
         #raw_input = pd.read_csv(dataFile)
-        #url = "https://raw.githubusercontent.com/jamesH-48/Neural-Network-A2/master/smalltest.csv"
-        url = "https://raw.githubusercontent.com/jamesH-48/Neural-Network-A2/master/EEG%20Eye%20State.csv"
+        url = "https://raw.githubusercontent.com/jamesH-48/Neural-Network-A2/master/smalltest.csv"
+        #url = "https://raw.githubusercontent.com/jamesH-48/Neural-Network-A2/master/EEG%20Eye%20State.csv"
+        #url = "https://raw.githubusercontent.com/jamesH-48/Neural-Network-A2/master/balance-scale-1.csv"
         raw_input = pd.read_csv(url, header=0)
         # TODO: Remember to implement the preprocess method
         processed_data = self.preprocess(raw_input)
-        self.train_dataset, self.test_dataset = train_test_split(processed_data, test_size = .1, random_state = state)
 
-        ncols = len(self.train_dataset.columns)
-        nrows = len(self.train_dataset.index)
-        ncolst = len(self.test_dataset.columns)
-        nrowst = len(self.test_dataset.index)
-        
-        self.X = self.train_dataset.iloc[:, 0:(ncols -1)].values.reshape(nrows, ncols-1)
-        self.Xtest = self.test_dataset.iloc[:, 0:(ncolst -1)].values.reshape(nrowst, ncolst-1)
-        self.y = self.train_dataset.iloc[:, (ncols-1)].values.reshape(nrows, 1)
-        self.ytest = self.test_dataset.iloc[:, (ncolst - 1)].values.reshape(nrowst, 1)
-
-        scaler = preprocessing.Normalizer()
-        self.X = scaler.fit_transform(self.X)
-        self.Xtest = scaler.transform(self.Xtest)
-
-        #print(self.X)
-        #print(self.Xtest)
-
-        '''
         print(raw_input)
         self.Xdf = raw_input[["X1","X2","X3"]]
         self.Xnp = self.Xdf.to_numpy()
         self.Ydf = raw_input[["Y","Y2"]]
         self.Ynp = self.Ydf.to_numpy()
 
-        self.X, self.Xtest, self.y, self.ytest = train_test_split(self.Xnp,self.Ynp,test_size=0.1, random_state=state)
+        self.X, self.Xtest, self.y, self.ytest = train_test_split(self.Xnp,self.Ynp,test_size=0.2, random_state=state)
 
         print(self.X, self.X.shape)
         print(self.y, self.y.shape)
         print(self.Xtest, self.Xtest.shape)
         print(self.ytest, self.ytest.shape)
-        '''
+
 
         #
         # Find number of input and output layers from the dataset
@@ -150,7 +132,7 @@ class NeuralNet:
     #
 
     def preprocess(self, X):
-
+        print(X)
         return X
 
     # Below is the training function
@@ -306,28 +288,27 @@ class NeuralNet:
         correct = 0
         if len(outputs) == len(self.y):
             for i in range(len(outputs)):
-                '''
-                print("Model Output for Example ", i, ": ", np.around(outputs[i]))
-                print("Full: ", outputs[i])
-                print("Actual for Example ", i, ": ", self.y[i])
-                '''
-                if np.around(outputs[i]) == self.y[i]:
-                    correct += 1
+                # Both Outputs have to match
+                # So for instance 1 output (1,0) must equal y (1,0)
+                if np.around(outputs[i,0]) == self.y[i,0]:
+                    if np.around(outputs[i, 1]) == self.y[i, 1]:
+                        print("out:", np.around(outputs[i,0]), np.around(outputs[i,1]), "actual:",self.y[i,0], self.y[i,1])
+                        correct += 1
             print("Percent Correct: ", (correct/len(outputs))*100, "%")
             print("Mean Squared Error: ", np.around((np.sum(0.5 * np.power((outputs - self.y), 2))), decimals=8))
         outputs = self.forward_test(activation, "test")
-        print(outputs)
+        print("test", outputs)
         print("Test Accuracy Results for ", activation, " activation function:")
         correct = 0
         if len(outputs) == len(self.ytest):
             for i in range(len(outputs)):
-                '''
-                print("Model Output for Example ", i, ": ", np.around(outputs[i]))
-                print("Full: ", outputs[i])
-                print("Actual for Example ", i, ": ", self.ytest[i])
-                '''
-                if np.around(outputs[i]) == self.ytest[i]:
-                    correct += 1
+                # Both Outputs have to match
+                # So for instance 1 output (1,0) must equal y (1,0)
+                if np.around(outputs[i, 0]) == self.ytest[i, 0]:
+                    if np.around(outputs[i, 1]) == self.ytest[i, 1]:
+                        print("out:", np.around(outputs[i, 0]), np.around(outputs[i, 1]), "actual:", self.ytest[i, 0],
+                              self.ytest[i, 1])
+                        correct += 1
             print("Percent Correct: ", (correct/len(outputs))*100, "%")
             print("Mean Squared Error: ", np.around((np.sum(0.5 * np.power((outputs - self.ytest), 2))), decimals=8), "\n")
 
@@ -337,11 +318,12 @@ if __name__ == "__main__":
     # Randomly Generate State for Train/Test Split
     seed(0)
     state = randint(0,1000)
-    max_iterations = 6000
+    max_iterations = 10000
     LR = .1
 
     # Train Sigmoid Model
     neural_network_sigmoid = NeuralNet("train.csv", "sigmoid", state)
+
     err_sigmoid = neural_network_sigmoid.train(max_iterations, LR)
 
 
