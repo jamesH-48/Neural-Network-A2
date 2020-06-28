@@ -50,7 +50,7 @@ class NeuralNet:
         self.Xnp = self.Xnp.astype(float)
         self.Ynp = self.Ynp.astype(float)
 
-        self.X, self.Xtest, self.y, self.ytest = train_test_split(self.Xnp,self.Ynp,test_size=0.2)
+        self.X, self.Xtest, self.y, self.ytest = train_test_split(self.Xnp,self.Ynp,test_size=0.1,random_state=state)
 
         #
         # Find number of input and output layers from the dataset
@@ -335,21 +335,15 @@ if __name__ == "__main__":
     # Randomly Generate State for Train/Test Split
     seed(0)
     state = randint(0,1000)
-    max_iterations = 5000
-    LR = .2
+    max_iterations = 9000
+    LR = .001
 
     # Train Sigmoid Model
     neural_network_sigmoid = NeuralNet("train.csv", "sigmoid", state)
-
     err_sigmoid = neural_network_sigmoid.train(max_iterations, LR)
-
-
     # Train ReLu Model
     neural_network_relu = NeuralNet("train.csv", "relu", state)
     err_relu = neural_network_relu.train(max_iterations, LR)
-
-
-
     # Train Tanh Model
     neural_network_tanh = NeuralNet("train.csv", "tanh", state)
     err_tanh = neural_network_tanh.train(max_iterations, LR)
@@ -359,6 +353,7 @@ if __name__ == "__main__":
     print("err s:", err_sigmoid)
     print("err r:", err_relu)
     print("err t:", err_tanh)
+
     # Print Out Test Error for Each Model
     neural_network_sigmoid.predict("sigmoid")
     neural_network_relu.predict("relu")
