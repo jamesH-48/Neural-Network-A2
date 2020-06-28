@@ -28,7 +28,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
 
 class NeuralNet:
-    def __init__(self, dataFile, activation, state, header=True, h1=8, h2=8):
+    def __init__(self, dataFile, activation, state, header=True, h1=8, h2=4):
         self.activation = activation
         #np.random.seed(1)
         # train refers to the training dataset
@@ -310,12 +310,11 @@ class NeuralNet:
                 if np.around(outputs[i,0]) == self.y[i,0]:
                     if np.around(outputs[i, 1]) == self.y[i, 1]:
                         if np.around(outputs[i,2]) == self.y[i,2]:
-                            print("out:", np.around(outputs[i,0]), np.around(outputs[i,1]), "actual:",self.y[i,0], self.y[i,1])
+                            #print("out:", np.around(outputs[i,0]), np.around(outputs[i,1]), np.around(outputs[i,2]), "actual:",self.y[i,0], self.y[i,1], self.y[i,2])
                             correct += 1
             print("Percent Correct: ", (correct/len(outputs))*100, "%")
             print("Mean Squared Error: ", np.around((np.sum(0.5 * np.power((outputs - self.y), 2))), decimals=8))
         outputs = self.forward_test(activation, "test")
-        print("test", outputs)
         print("Test Accuracy Results for ", activation, " activation function:")
         correct = 0
         if len(outputs) == len(self.ytest):
@@ -325,7 +324,7 @@ class NeuralNet:
                 if np.around(outputs[i, 0]) == self.ytest[i, 0]:
                     if np.around(outputs[i, 1]) == self.ytest[i, 1]:
                         if np.around(outputs[i, 2]) == self.ytest[i, 2]:
-                            print("out:", np.around(outputs[i, 0]), np.around(outputs[i, 1]), "actual:", self.ytest[i, 0],self.ytest[i, 1])
+                            #print("out:", np.around(outputs[i,0]), np.around(outputs[i,1]), np.around(outputs[i,2]), "actual:",self.ytest[i,0], self.ytest[i,1], self.ytest[i,2])
                             correct += 1
             print("Percent Correct: ", (correct/len(outputs))*100, "%")
             print("Mean Squared Error: ", np.around((np.sum(0.5 * np.power((outputs - self.ytest), 2))), decimals=8), "\n")
@@ -336,8 +335,8 @@ if __name__ == "__main__":
     # Randomly Generate State for Train/Test Split
     seed(0)
     state = randint(0,1000)
-    max_iterations = 500
-    LR = .1
+    max_iterations = 5000
+    LR = .2
 
     # Train Sigmoid Model
     neural_network_sigmoid = NeuralNet("train.csv", "sigmoid", state)
