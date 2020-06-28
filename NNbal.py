@@ -47,6 +47,9 @@ class NeuralNet:
         self.Ydf = proc_y
         self.Ynp = self.Ydf.to_numpy()
 
+        self.Xnp = self.Xnp.astype(float)
+        self.Ynp = self.Ynp.astype(float)
+
         self.X, self.Xtest, self.y, self.ytest = train_test_split(self.Xnp,self.Ynp,test_size=0.2)
 
         #
@@ -137,8 +140,6 @@ class NeuralNet:
                 y_df.loc[i] = (0, 1, 0)
             if newdataY.Class[i] == 'R':
                 y_df.loc[i] = (0, 0, 1)
-        print(y_df)
-        print(newdataX)
 
         return newdataX, y_df
 
@@ -169,6 +170,15 @@ class NeuralNet:
             self.Wb_hidden2 += update_weight_hidden2_b
             self.W_hidden1 += update_weight_hidden
             self.Wb_hidden1 += update_weight_hidden_b
+
+            '''
+            self.W_output = np.add(self.W_output, update_weight_output, casting ="unsafe")
+            self.Wb_output = np.add(self.Wb_output, update_weight_output_b, casting="unsafe")
+            self.W_hidden2 = np.add(self.W_hidden2, update_weight_hidden2, casting="unsafe")
+            self.Wb_hidden2 = np.add(self.Wb_hidden2, update_weight_hidden2_b, casting="unsafe")
+            self.W_hidden1 = np.add(self.W_hidden1, update_weight_hidden, casting="unsafe")
+            self.Wb_hidden1 = np.add(self.Wb_hidden1, update_weight_output_b, casting="unsafe")
+            '''
 
         print("After " + str(max_iterations) + " iterations, the total error is " + str(np.sum(error)))
         print("The final weight vectors are (starting from input to output layers) \n" + str(self.W_hidden1))
@@ -326,12 +336,12 @@ if __name__ == "__main__":
     # Randomly Generate State for Train/Test Split
     seed(0)
     state = randint(0,1000)
-    max_iterations = 10000
+    max_iterations = 500
     LR = .1
 
     # Train Sigmoid Model
     neural_network_sigmoid = NeuralNet("train.csv", "sigmoid", state)
-'''
+
     err_sigmoid = neural_network_sigmoid.train(max_iterations, LR)
 
 
@@ -354,4 +364,3 @@ if __name__ == "__main__":
     neural_network_sigmoid.predict("sigmoid")
     neural_network_relu.predict("relu")
     neural_network_tanh.predict("tanh")
-'''
