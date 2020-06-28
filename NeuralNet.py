@@ -27,7 +27,8 @@ from sklearn.model_selection import train_test_split
 
 
 class NeuralNet:
-    def __init__(self, dataFile, header=True, h=4):
+    def __init__(self, dataFile, activation, state, header=True, h=4):
+        self.activation = activation
         #np.random.seed(1)
         # train refers to the training dataset
         # test refers to the testing dataset
@@ -35,7 +36,7 @@ class NeuralNet:
         raw_input = pd.read_csv(dataFile)
         # TODO: Remember to implement the preprocess method
         processed_data = self.preprocess(raw_input)
-        self.train_dataset, self.test_dataset = train_test_split(processed_data)
+        self.train_dataset, self.test_dataset = train_test_split(processed_data, test_size = .2, random_state = state)
         ncols = len(self.train_dataset.columns)
         nrows = len(self.train_dataset.index)
         ncolst = len(self.test_dataset.columns)
@@ -70,7 +71,7 @@ class NeuralNet:
     # TODO: I have coded the sigmoid activation function, you need to do the same for tanh and ReLu
     #
 
-    def __activation(self, x, activation="sigmoid"):
+    def __activation(self, x, activation):
         if activation == "sigmoid":
             self.__sigmoid(self, x)
         if activation == "relu":
@@ -82,7 +83,7 @@ class NeuralNet:
     # TODO: Define the derivative function for tanh, ReLu and their derivatives
     #
 
-    def __activation_derivative(self, x, activation="sigmoid"):
+    def __activation_derivative(self, x, activation):
         if activation == "sigmoid":
             self.__sigmoid_derivative(self, x)
         if activation == "relu":
@@ -121,13 +122,14 @@ class NeuralNet:
 
     # Below is the training function
 
-    def train(self, max_iterations=60000, learning_rate=0.25):
+    def train(self, max_iterations, learning_rate):
+        errGraph = np.zeros((max_iterations,1))
         for iteration in range(max_iterations):
-            activation = "sigmoid"
-            out = self.forward_pass(activation)
+            out = self.forward_pass(self.activation)
             error = 0.5 * np.power((out - self.y), 2)
+            errGraph[iteration] = np.sum(error)
             # TODO: I have coded the sigmoid activation, you have to do the rest
-            self.backward_pass(out, activation)
+            self.backward_pass(out, self.activation)
 
             update_weight_output = learning_rate * np.dot(self.X_hidden.T, self.deltaOut)
             update_weight_output_b = learning_rate * np.dot(np.ones((np.size(self.X, 0), 1)).T, self.deltaOut)
@@ -146,29 +148,52 @@ class NeuralNet:
 
         print("The final bias vectors are (starting from input to output layers) \n" + str(self.Wb_hidden))
         print("The final bias vectors are (starting from input to output layers) \n" + str(self.Wb_output))
-
+        return errGraph
     def forward_pass(self, activation):
         # pass our inputs through our neural network
         in_hidden = np.dot(self.X, self.W_hidden) + self.Wb_hidden
-        # TODO: I have coded the sigmoid activation, you have to do the rest
+        # Hidden Layer Forward
         if activation == "sigmoid":
             self.X_hidden = self.__sigmoid(in_hidden)
+        if activation == "relu":
+            self.X_hidden = self.__relu(in_hidden)
+        if activation == "tanh":
+            self.X_hidden = self.__tanh(in_hidden)
+        # Hidden Layer Out dot product with Output Weights
         in_output = np.dot(self.X_hidden, self.W_output) + self.Wb_output
+        # Output Layer Forward
         if activation == "sigmoid":
             out = self.__sigmoid(in_output)
+        if activation == "relu":
+            out = self.__relu(in_output)
+        if activation == "tanh":
+            out = self.__tanh(in_output)
         return out
 
-    # Added Function to Propagate Test Data Set through Trained Model
-    def forward_test(self, activation):
-        print("Xtest: ", self.Xtest, self.Xtest.shape)
-        # pass our inputs through our neural network
-        in_hidden = np.dot(self.Xtest, self.W_hidden) + self.Wb_hidden
-        # TODO: I have coded the sigmoid activation, you have to do the rest
+    # Added Function to Propogate Test Data Set through Trained Model
+    def forward_test(self, activation, t):
+        if t == "train":
+            # pass our inputs through our neural network
+            in_hidden = np.dot(self.X, self.W_hidden) + self.Wb_hidden
+        if t == "test":
+            # pass our inputs through our neural network
+            in_hidden = np.dot(self.Xtest, self.W_hidden) + self.Wb_hidden
+        # Hidden Layer Forward
         if activation == "sigmoid":
             self.X_test_hidden = self.__sigmoid(in_hidden)
+        if activation == "relu":
+            self.X_test_hidden = self.__relu(in_hidden)
+        if activation == "tanh":
+            self.X_test_hidden = self.__tanh(in_hidden)
+        # Hidden Layer Out dot product with Output Weights
         in_output = np.dot(self.X_test_hidden, self.W_output) + self.Wb_output
+        # Output Layer Forward
         if activation == "sigmoid":
             out = self.__sigmoid(in_output)
+        if activation == "relu":
+            out = self.__relu(in_output)
+        if activation == "tanh":
+            out = self.__tanh(in_output)
         return out
 
     def backward_pass(self, out, activation):
@@ -181,12 +206,20 @@ class NeuralNet:
     def compute_output_delta(self, out, activation="sigmoid"):
         if activation == "sigmoid":
             delta_output = (self.y - out) * (self.__sigmoid_derivative(out))
+        if activation == "relu":
+            delta_output = (self.y - out) * (self.__relu_derivative(out))
+        if activation == "tanh":
+            delta_output = (self.y - out) * (self.__tanh_derivative(out))
 
         self.deltaOut = delta_output
 
     def compute_hidden_delta(self, activation):
         if activation == "sigmoid":
             delta_hidden_layer = (self.deltaOut.dot(self.W_output.T)) * (self.__sigmoid_derivative(self.X_hidden))
+        if activation == "relu":
+            delta_hidden_layer = (self.deltaOut.dot(self.W_output.T)) * (self.__relu_derivative(self.X_hidden))
+        if activation == "tanh":
+            delta_hidden_layer = (self.deltaOut.dot(self.W_output.T)) * (self.__tanh_derivative(self.X_hidden))
 
         self.deltaHidden = delta_hidden_layer
 
@@ -194,21 +227,50 @@ class NeuralNet:
     # You can assume that the test dataset has the same format as the training dataset
     # You have to output the test error from this function
 
-    def predict(self, header = True):
+    def predict(self, activation, header = True):
         # TODO: obtain prediction on self.test_dataset
-        outputs = self.forward_test("sigmoid")
-
-        if len(outputs) == len(self.ytest):
+        outputs = self.forward_test(activation, "train")
+        print("Train Accuracy Results for ", activation, " activation function:")
+        correct = 0
+        if len(outputs) == len(self.y):
             for i in range(len(outputs)):
+                '''
                 print("Model Output for Example ", i, ": ", np.around(outputs[i]))
                 print("Full: ", outputs[i])
-                print("Test Actual for Example ", i, ": ", self.ytest[i])
-        return 0
+                print("Actual for Example ", i, ": ", self.y[i])
+                '''
+                if np.around(outputs[i]) == self.y[i]:
+                    correct += 1
+            print("Percent Correct: ", (correct/len(outputs))*100, "%")
+            print("Error: ", np.sum(0.5 * np.power((outputs - self.y), 2)))
+        outputs = self.forward_test(activation, "test")
+        print("Test Accuracy Results for ", activation, " activation function:")
+        correct = 0
+        if len(outputs) == len(self.ytest):
+            for i in range(len(outputs)):
+                '''
+                print("Model Output for Example ", i, ": ", np.around(outputs[i]))
+                print("Full: ", outputs[i])
+                print("Actual for Example ", i, ": ", self.ytest[i])
+                '''
+                if np.around(outputs[i]) == self.ytest[i]:
+                    correct += 1
+            print("Percent Correct: ", (correct/len(outputs))*100, "%")
+            print("Error: ", np.sum(0.5 * np.power((outputs - self.ytest), 2)))
 
 
 if __name__ == "__main__":
-    # TODO: Make Neural Net take Activation as input. We will end up with 3 models.
-    neural_network = NeuralNet("train.csv")
-    neural_network.train()
-    testError = neural_network.predict()
-    print("Test error = " + str(testError))
+    state = 1
+    max_iterations = 6000
+    LR = .25
+    # Train Sigmoid, ReLu, and Tanh Models
+    neural_network_sigmoid = NeuralNet("train.csv", "sigmoid", state)
+    err_sigmoid = neural_network_sigmoid.train(max_iterations, LR)
+    '''
+    neural_network_relu = NeuralNet("train.csv", "relu")
+    neural_network_relu.train()
+    neural_network_tanh = NeuralNet("train.csv", "tanh")
+    neural_network_tanh.train()
+'''
+    # Print Out Test Error for Each Model
+    neural_network_sigmoid.predict("sigmoid")
