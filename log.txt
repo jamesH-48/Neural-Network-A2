@@ -824,7 +824,6 @@ The final bias vectors are (starting from input to output layers)
 The final bias vectors are (starting from input to output layers) 
 [[1.11442514 0.00146702 0.99599182]]
 
-State:  243
 err s:
  [[322.45687901]
  [308.04651414]
